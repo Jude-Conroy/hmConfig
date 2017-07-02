@@ -1,0 +1,74 @@
+﻿<div class="container">
+    <div class="headingText">{{title}}</div>
+    <div class="form-group"></div>
+    <div class="row">
+        <!--
+        -          Show current status (devices and names listed in config.cfg
+        -          ** there are a maximum of 4 devices**)
+        -          Set number of Audio Inputs
+        -          Provide name for each input (eg “sky box 1” etc)
+        -          Write details to config.cfg  (currently sitting in home directory)
+        -->
+        <div class="form-group">
+            <label class="labelText">Device Config</label>
+        </div>
+        <div class="form-group">
+            <div >
+                <table>
+                    <ul>
+                        <li ng-repeat="name in deviceData" class="labelText">
+                            {{name.name}} {{name.input}}
+                        </li>
+                    </ul>
+                </table>
+                <form class="formFormatting">
+                    <div class="form-group">
+                        <table>
+                            <tr>
+                                <td>
+                                    <label class="labelText"  for="name1">Config 1 Name</label>
+                                    <input class="labelText" type="text" id="name1" ng-model="name1">
+                                </td>
+                                <td>
+                                   <label class="labelText"  for="input1">Input</label>
+                                   <input class="labelText" type="text" id="input1" ng-model="input1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="labelText"  for="name2">Config 2 Name</label>
+                                    <input class="labelText" type="text" id="name2" ng-model="name2">
+                                </td>
+                                <td>
+                                    <label class="labelText"  for="input2">Input</label>
+                                    <input class="labelText" type="text" id="input2" ng-model="input2">
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="labelText"  for="name3">Config 3 Name</label>
+                                    <input class="labelText" type="text" id="name3" ng-model="name3">
+                                </td>
+                                <td>
+                                    <label class="labelText"  for="input4">Input</label>
+                                    <input class="labelText" type="text" id="input4" ng-model="input4">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="labelText"  for="name">Config 4 Name</label>
+                                    <input class="labelText" type="text" id="name" ng-model="name">
+                                </td>
+                                <td>
+                                    <label class="labelText"  for="input">Input</label>
+                                    <input class="labelText" type="text" id="input" ng-model="input">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="submitFrm()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

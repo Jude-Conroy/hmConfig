@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Minute Media</title>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+    <intercept-url pattern="/favicon.ico" access="ROLE_ANONYMOUS" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome.min.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <link href="graphs/graph.css" rel="stylesheet" />
+    <link href="frameworkCore/framework.css" rel="stylesheet" />
+    <link href="menu/menu.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.1/build/pure-min.css">
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="angular/angular.js"></script>
+    <script type="text/javascript" src="angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="angular-material/angular-material.js"></script>
+    <script type="text/javascript" src="angular-messages/angular-messages.js"></script>
+    <script type="text/javascript" src="angular-aria/angular-aria.js"></script>
+
+    <script type="text/javascript" src="moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript" src="menu/menu.js"></script>
+    <script type="text/javascript" src="menu/menuController.js"></script>
+    <script type="text/javascript" src="menu/menuDirective.js"></script>
+    <script type="text/javascript" src="menu/menuItemDirective.js"></script>
+    <script type="text/javascript" src="menu/menuGroupDirective.js"></script>
+
+    <script type="text/javascript" src="frameworkCore/framework.js"></script>
+    <script type="text/javascript" src="frameworkCore/frameworkController.js"></script>
+    <script type="text/javascript" src="frameworkCore/frameworkDirective.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="appconfig.js"></script>
+    <script type="text/javascript" src="appRoutes.js"></script>
+
+    <script src="directives/deviceDirective.js"></script>
+    <script src="directives/wifiDirective.js"></script>
+    <script src="directives/audioZoneDirective.js"></script>
+
+    <script type="text/javascript" src="dataService.js"></script>
+
+    <script src="remarkable-bootstrap-notify/dist/bootstrap-notify.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular.js"></script>
+    <link rel="stylesheet"; href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css">
+    <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+</head>
+
+<body class="container-fluid">
+    <framework title="Half Minute Media" subtitle="Configuration" icon-file="yoda_256.png">
+        <menu class="menu-left">
+            <menu-group label="Configuration" icon="fa-gears">
+                <menu-item label="Device" icon="fa-bar-chart" route="deviceView"></menu-item>
+                <menu-item label="Wifi" icon="fa-pie-chart" route="wifiView"></menu-item>
+                <menu-item label="Audio Zone" icon="fa-line-chart" route="audioZoneView"></menu-item>
+            </menu-group>
+        </menu>
+    </framework>
+</body>
+</html>

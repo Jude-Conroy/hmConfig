@@ -1,0 +1,43 @@
+﻿.dropDownText{
+    font-size: 15px;
+    color: #1e347b;
+    border-radius: 0;
+    padding: 5px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.graphWidth{
+    width: 80%;
+}
+
+.headingText{
+    font-size: 20px;
+    color: cornflowerblue;
+}
+
+.labelText{
+    font-size: 15px;
+    color: cornflowerblue;
+}
+
+.formFormatting{
+    font-size: 10px;
+    color: cornflowerblue;
+    width: 200px;
+    height: 50px;
+}
+
+.selectFrmt{
+    font-size: 20px;
+    color: cornflowerblue;
+}
+
+.dateText{
+    font-size: 17px;
+    color: #204d74;
+    border-radius: 0;
+    padding: 5px;
+}

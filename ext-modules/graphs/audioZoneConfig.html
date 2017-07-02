@@ -1,0 +1,65 @@
+﻿<div class="container">
+    <div class="headingText">{{title}}</div>
+    <div class="form-group"></div>
+    <div class="row">
+        <!--
+       <div class='col-sm-3'>
+
+           <div class="form-group">
+              <div>
+                   <button class="btn" ng-model="date" my-date-picker><i class="fa fa-calendar"></i></button>
+                   <label class='dateText'>{{formattedDate}}</label>
+               </div>
+               <button class="btn btn-primary" ng-click="changeVisitDate(selected.date)">Run report</button>
+           </div>
+       </div>
+       <div class="form-group">
+                       <label class="labelText"  for="exampleInputFile">File input</label>
+                       <input type="file" id="exampleInputFile" ng-model="vm.user.file">
+                       <p class="help-block">Example block-level help text here.</p>
+                   </div>
+                   <div class="checkbox">
+                       <label>
+                           <input type="checkbox" ng-model="vm.user.checked"> Check me out
+                       </label>
+                   </div>
+       -->
+       <div class="form-group">
+           <div >
+               <!--
+                  Show Current status (SSID & Channel)
+                    -          Allow user to set AudioZone SSID (Always starts with “AudioZone” but they can add pub name or similar after that)
+                    -          Allow user to set wifi broadcast channel number
+                    -          present them with data showing channels in use by other Aps in the location?
+                    -          Write new details to /etc/hostapd/hostapd.conf
+                    <label class="labelText" for="selectedSSID">SSID</label>
+                       <input type="text" class="form-control" id="selectedSSID" placeholder="Enter email" ng-model="ssid">
+                                              <label class="labelText"  for="selectedChannel">Channel</label>
+                       <input type="text" class="form-control" id="selectedChannel" placeholder="Password" ng-model="channel">
+               -->
+               <table>
+                   <ul>
+                       <li ng-repeat="name in azData" class="labelText">
+                           <!--ng-class="{ active: $index == state.selected }"
+                           ng-click="state.selected = $index">-->
+                           {{name.ssid}} {{name.channel}}
+                       </li>
+                   </ul>
+               </table>
+               <form class="formFormatting">
+                   <div class="form-group">
+                       <label class="labelText"  for="ssid">SSID</label>
+                       <input class="labelText" type="text" id="ssid" ng-model="ssid">
+                   </div>
+                   <div class="form-group">
+                       <label class="labelText"  for="channel">Channel</label>
+                       <input class="labelText" type="text" id="channel" ng-model="channel">
+                   </div>
+                   <button type="submit" class="btn btn-default" ng-click="submitFrm()">Submit</button>
+               </form>
+           </div>
+       </div>
+   </div>
+
+
+</div>

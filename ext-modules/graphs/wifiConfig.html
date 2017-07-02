@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="headingText">{{title}}</div>
+    <div class="form-group"></div>
+    <div class="row">
+        <!--
+        -          Show current status (SSID : connected/non connected : IP)
+        -          Present user with list of available SSIDs & allow to select one
+        -          If secured then enter PW
+        -          If unsecured enter “NONE”
+        -          Write details to etc/wpa_supplicant/wpa_supplicant.conf
+        -          Script scanner.sh current does most/all of this
+        -->
+        <div class="form-group">
+            <label class="labelText">Available Access points</label>
+        </div>
+        <div class="form-group">
+            <div >
+                <table>
+                    <ul>
+                        <li ng-repeat="name in wifiData" class="labelText">
+                            {{name.ssid}} {{name.channel}}
+                        </li>
+                    </ul>
+                </table>
+                <form class="formFormatting">
+                    <div class="form-group">
+                        <label class="labelText"  for="ssid">SSID</label>
+                        <input class="labelText" type="text" id="ssid" ng-model="selSsid">
+                    </div>
+                    <div class="form-group">
+                        <label class="labelText"  for="channel">Channel</label>
+                        <input class="labelText" type="text" id="channel" ng-model="selChannel">
+                    </div>
+                    <div class="form-group">
+                        <label class="labelText"  for="auth">authentication type</label>
+                        <input class="labelText" type="text" id="auth" ng-model="selAuth">
+                    </div>
+                    <div class="form-group">
+                        <label class="labelText"  for="pwd">password</label>
+                        <input class="labelText" type="text" id="pwd" ng-model="selPwd">
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="submitFrm()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
